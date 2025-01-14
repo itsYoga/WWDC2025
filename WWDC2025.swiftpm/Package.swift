@@ -8,19 +8,19 @@ import PackageDescription
 import AppleProductTypes
 
 let package = Package(
-    name: "VolleyballAcademy",
+    name: "WWDC2025",
     platforms: [
         .iOS("16.0")
     ],
     products: [
         .iOSApplication(
-            name: "VolleyballAcademy",
+            name: "WWDC2025",
             targets: ["AppModule"],
-            bundleIdentifier: "com.yogacode.VolleyballAcademy",
+            bundleIdentifier: "com.yogacode.WWDC2025",
             teamIdentifier: "GJRVCWA2U3",
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .heart),
+            appIcon: .asset("AppIcon"),
             accentColor: .presetColor(.cyan),
             supportedDeviceFamilies: [
                 .pad,
@@ -31,7 +31,8 @@ let package = Package(
                 .landscapeRight,
                 .landscapeLeft,
                 .portraitUpsideDown(.when(deviceFamilies: [.pad]))
-            ]
+            ],
+            appCategory: .developerTools
         )
     ],
     targets: [
@@ -40,5 +41,5 @@ let package = Package(
             path: "."
         )
     ],
-    swiftLanguageVersions: [.v6]
+    swiftLanguageVersions: [.version("6")]
 )
