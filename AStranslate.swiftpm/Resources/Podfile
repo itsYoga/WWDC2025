@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ML Kit' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ML Kit
+  pod 'GoogleMLKit/Translate'
+
+  target 'ML KitTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ML KitUITests' do
+    # Pods for testing
+  end
+
+end
